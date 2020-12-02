@@ -1,0 +1,11 @@
+local DaHoodGUIMenu = script.Parent.Parent:FindFirstChild("DaHoodGUIMenu")
+
+local script = Instance.new('LocalScript', DaHoodGUIMenu)
+
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+counter = 0
+
+while wait(0.1) do
+	DaHoodGUIMenu.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	counter = counter + 0.03	
+end
